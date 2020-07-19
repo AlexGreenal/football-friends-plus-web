@@ -1,0 +1,146 @@
+<!--
+ 名称：mall.html
+ 介绍：这是 商城界面，由侧边栏、card 元素构成。
+ 时间：2020.07.07
+ 负责人：Alex Greenall
+ 进度：界面搭建完成
+-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.8,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<title>FootBall Friends Plus</title>
+		<script src="../Javascript/sidebar.js"></script>
+		<link rel="stylesheet" type="text/css" href="../CSS/sidebar.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../CSS/app.css">
+
+		<style>
+			h5 {
+				margin: 5px 7px;
+			}
+		</style>
+	</head>
+
+	<body>
+	<!--侧栏界面设计-->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="index.html">球局信息</a>
+			<a href="chat.html">球友+</a>
+			<a href="mall.html">球友商城</a>
+			<a href="about.html">关于</a>
+		</div>
+
+		<div id="main">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 球友商城</span>
+		</div>
+		
+		<div><p style="height: 3.75rem;"></p></div>
+		
+		<div class="mui-content-padded" style="margin: 5px;">
+			<div class="mui-input-row mui-search">
+				<input type="search" class="mui-input-clear" placeholder="搜索">
+			</div>
+		</div>
+		<!-- 顶部选项卡-->
+		<div id="slider" class="mui-slider">
+			<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="mui-scroll">
+					<a class="mui-control-item mui-active" href="#">
+						推荐
+					</a>
+					<a class="mui-control-item" href="#">
+						 球鞋
+					</a>
+					<a class="mui-control-item" href="#">
+						球衣
+					</a>
+					<a class="mui-control-item" href="#">
+						足球
+					</a>
+					<a class="mui-control-item" href="#">
+						周边
+					</a>
+					<a class="mui-control-item" href="#">
+						饮食
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--推荐开始-->
+		<div class="mui-card">
+			<div class="mui-card-header mui-card-media">
+				<img src="../assert/listpic/0.png" />
+				<div class="mui-media-body">
+					Alex
+					<p>发表于 2020-05-28 18:32</p>
+				</div>
+			</div>
+			<div class="mui-card-content" >
+				<img src="../assert/launch%20screen.jpg" alt="" width="100%"/>
+			</div>
+			<div class="mui-card-footer">
+				<a class="mui-card-link"> 赞</a>
+				<a class="mui-card-link">评论</a>
+				<a class="mui-card-link" href="mall/detail.html">查看商品链接</a>
+			</div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-header mui-card-media">
+				<img src="../assert/listpic/1.jpg" />
+				<div class="mui-media-body">
+					 Sum
+					<p>发表于 2019-12-30 7:20</p>
+				</div>
+			</div>
+			<div class="mui-card-content" >
+				<img src="../assert/launch%20screen.jpg" alt="" width="100%"/>
+			</div>
+			<div class="mui-card-footer">
+				<a class="mui-card-link">赞</a>
+				<a class="mui-card-link">评论</a>
+				<a class="mui-card-link">查看商品链接</a>
+			</div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-header mui-card-media">
+				<img src="../assert/listpic/2.jpg" />
+				<div class="mui-media-body">
+					John
+					<p>发表于 2017-08-07 12:30</p>
+				</div>
+			</div>
+			<div class="mui-card-content" >
+				<img src="../assert/launch%20screen.jpg" alt="" width="100%"/>
+			</div>
+			<div class="mui-card-footer">
+				<a class="mui-card-link">赞</a>
+				<a class="mui-card-link">评论</a>
+				<a class="mui-card-link">查看商品链接</a>
+			</div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-header mui-card-media">
+				<img src="../assert/logo.png" />
+				<div class="mui-media-body">
+					小M
+					<p>发表于 2016-06-30 15:30</p>
+				</div>
+			</div>
+			<div class="mui-card-content" >
+				<img src="../assert/launch%20screen.jpg" alt="" width="100%"/>
+			</div>
+			<div class="mui-card-footer">
+				<a class="mui-card-link">赞</a>
+				<a class="mui-card-link">评论</a>
+				<a class="mui-card-link">查看商品链接</a>
+			</div>
+		</div>
+		<script src="../Javascript/mui.min.js"></script>
+	</body>
+</html>

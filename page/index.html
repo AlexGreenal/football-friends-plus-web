@@ -1,0 +1,149 @@
+<!--
+ 名称：index.html
+ 介绍：这是整个软件的主界面，由侧边栏、card 元素、tabbar 构成。
+ 时间：2020.07.07
+ 负责人：Alex Greenall
+ 进度：界面搭建完成
+-->
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=0.8,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<title>FootBall Friends Plus</title>
+		<script src="../Javascript/jquery.min.js"></script>
+		<script src="../Javascript/sidebar.js"></script>
+		<script src="../Javascript/tabbar.js"></script>
+		<link rel="stylesheet" type="text/css" href="../CSS/card.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/sidebar.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/tabbar.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/font-awesome.min.css">
+	</head>
+
+	<body>
+		<!--侧边栏-->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="index.html">球局信息</a>
+			<a href="chat.html">球友+</a>
+			<a href="mall.html">球友商城</a>
+			<a href="about.html">关于</a>
+		</div>
+		
+		<header>
+			<div id="main">
+			    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 球局信息</span>
+			</div>
+		</header>
+		
+		<main>
+			<!--空隙填充-->
+			<div class="card">
+				<div class="container">
+					<p style="height: 16px"></p>
+				</div>
+			</div>
+			<!--今日天气-->
+			<div class="card">
+				<div class="container">
+					<span style="float: right;margin-top: 10%;">
+						<font size="+5">
+							<text>27</text>ºC
+						</font>
+					</span>
+					<h4><b>今日天气</b></h4>
+					<p>晴转多云。今天紫外线强度大，注意做好防护。</p> 
+					<p>预计适宜球赛时间段为 <text>13:30-18:00。</text></p>
+				</div>
+			</div>
+			<!--球局邀请-->	
+			<div class="card">
+				<div class="container">
+					<h4><b>球局邀请</b>&nbsp;&nbsp;&nbsp;<a href="#" style="color: dimgray; font-size: 12px;">查看详情 ></a></h4>	
+					<p>
+						<text>user name</text>
+						邀请你参加
+						<text>17:00</text> 
+						位于
+						<text>大连交通大学</text> 
+						的球赛
+					</p>
+					<p>
+						<text>user name</text> 
+						邀请你参加 
+						<text>17:00</text> 
+						位于
+						<text>大连交通大学</text> 
+						的球赛
+					</p>
+					<p>
+						<text>user name</text> 
+						邀请你参加 
+						<text>17:00</text> 
+						位于
+						<text>大连交通大学</text> 
+						的球赛
+					</p>
+					<p>
+						<text>user name</text> 
+						邀请你参加 
+						<text>17:00</text> 
+						位于
+						<text>大连交通大学</text> 
+						的球赛
+					</p>
+					
+				</div>
+			</div>
+			<!--生活服务建议-->
+			<div class="card">
+				<div class="container">
+					<h4><b>生活服务建议</b></h4>
+					<p>附近的足球场...</p> 
+					<p>附近的便利店与饮品店...</p>
+					<p>距离最近球场的路程...</p>
+					<p>近 24 小时天气预报...</p>
+				</div>
+			</div>
+			<!--底部空隙填充-->
+			<div class="card">
+				<div class="container">
+					<p style="height: 30px">我是内容为空的底栏</p>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<!--底部选项卡栏-->
+			<div id="menu" class="menu">			
+				<div id="one" class="subMenu text-center" data-src="index.html">
+					<a href="index.html" >
+						<i class="fa fa-futbol-o fa-2x" aria-hidden="true"></i>
+						<div class="menu_name">生活信息</div>
+					</a>
+				</div>
+				
+				<div id="two" class="subMenu text-center" data-src="map.html">
+					<a href="tab/map.html">
+						<i class="fa fa-flag fa-2x" aria-hidden="true"></i>
+						<div class="menu_name">球场位置</div>
+					</a>
+				</div>
+				
+				<div id="three" class="subMenu text-center" data-src="">
+					<a href="tab/miniprog.html">
+						<i class="fa fa-tasks fa-2x" aria-hidden="true"></i>
+						<div class="menu_name">小程序</div>
+					</a>
+				</div>
+					
+			</div>
+		</footer>
+	</body>
+</html>

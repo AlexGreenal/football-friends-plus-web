@@ -1,0 +1,54 @@
+<!--
+ 名称：about.html
+ 介绍：这是关于界面，由侧边栏、图片元素 构成。
+ 时间：2020.07. 17
+ 负责人：Alex Greenall
+ 进度：界面搭建完成
+-->
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=0.8,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<title>FootBall Friends Plus</title>
+		<script src="../Javascript/sidebar.js"></script>
+		<link rel="stylesheet" type="text/css" href="../CSS/sidebar.css">
+		<style>
+			div#div1{
+				position:fixed;
+				top:0;
+				left:0;
+				bottom:0;
+				right:0;
+				z-index:-1;
+			}
+			div#div1 > img {
+				height:100%;
+				width:100%;
+				border:0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--侧边栏-->
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <a href="index.html">球局信息</a>
+		  <a href="chat.html">球友+</a>
+		  <a href="mall.html">球友商城</a>
+		  <a href="about.html">关于</a>
+		</div>
+
+		<div id="main">
+		  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 关于</span>
+		</div>
+		<!--图片-->
+		<div id="div1"><img src="../assert/launch%20screen.jpg" /></div>
+	</body>
+</html>

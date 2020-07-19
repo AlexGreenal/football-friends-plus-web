@@ -1,0 +1,116 @@
+<!--
+ 名称：easter-egg.html
+ 介绍：这是彩蛋页面，由card 元素构成。
+ 时间：2020.07.15
+ 负责人：Alex Greenall
+ 进度：完成
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>by alex greenall</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.2,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="../../CSS/mui.min.css">
+		<style>
+			.wrapper{ overflow:hidden; margin:0 auto; position:relative;}
+			.wrapper input{position:absolute}
+			.wrapper input.grow{-webkit-animation:grow 0.8s cubic-bezier(0.175,0.885,0.32,1.275);-moz-animation:grow 0.8s cubic-bezier(0.175,0.885,0.32,1.275);animation:grow 0.8s cubic-bezier(0.175,0.885,0.32,1.275)}
+			@-webkit-keyframes grow{
+				0%{-webkit-transform:scale(1)}
+				30%{-webkit-transform:scale(2.5)}
+				100%{-webkit-transform:scale(1)}
+			}
+			@-moz-keyframes grow{
+				0%{-moz-transform:scale(1)}
+				30%{-moz-transform:scale(2.5)}
+				100%{-moz-transform:scale(1)}
+			}
+			@keyframes grow{
+				0%{transform:scale(1)}
+				30%{transform:scale(2.5)}
+				100%{transform:scale(1)}
+			}	
+		</style>
+	</head>
+	<body>
+		<div>
+			<p><font size="3">&nbsp;&nbsp;哈哈，你竟然发现了彩蛋！&nbsp;感谢你使用本程序</font></p>
+		</div>
+		<br><br><br>
+		<div id="field"></div>
+		<script>
+			var RES_X = 20;
+			var RES_Y = 20;
+			var SIZE = 22;
+			if (/iphone|ipad|android/ig.test(navigator.userAgent)) {
+				RES_X = 10;
+				RES_Y = 10;
+				SIZE = 25
+			}
+			var entities = [];
+			var wrapper = document.getElementById('field');
+			wrapper.className = 'wrapper';
+			wrapper.style.width = (RES_X * SIZE) + 'px';
+			wrapper.style.height = (RES_Y * SIZE) + 'px';
+			for (var x = 0; x < RES_X; x++) {
+				for (var y = 0; y < RES_Y; y++) {
+					var el = document.createElement('input');
+					el.setAttribute('type', 'checkbox');
+					wrapper.appendChild(el);
+					var entity = {
+						element: el,
+						x: x * SIZE,
+						y: y * SIZE
+					}
+					el.style.left = entity.x + 'px';
+					el.style.top = entity.y + 'px';
+					el.addEventListener('change', this.toggle.bind(this, entity));
+					entities.push(entity)
+				}
+			}
+			function toggle(targetEntity) {
+				var checked = targetEntity.element.checked;
+				entities.forEach(function(entity) {
+					var dx = targetEntity.x - entity.x;
+					var dy = targetEntity.y - entity.y;
+					var distance = Math.sqrt(dx * dx + dy * dy);
+					setTimeout(function() {
+						entity.element.checked = checked;
+						entity.element.className = '';
+						entity.element.offsetWidth;
+						entity.element.className = 'grow'
+					}, Math.round(distance * 1.8))
+				})
+			}
+			setTimeout(function() {
+				entities[0].element.checked = true;
+				toggle(entities[0])
+			}, 800);			
+		</script><br><br><br>
+		<a href="miniprog.html">
+			<button type="button" 
+				class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" 
+				style="margin-left:0.3125rem;width: 97%;">
+				  返回
+			</button>
+		</a>
+		 <div class="mui-card">
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					<font size="3">
+						 <b>开发人员目录：</b><br>
+						 Alex Greenall(开发)<br>
+						 Wang Yining（设计）<br>
+						 Zhang Xiaoqi（审核）<br>
+						 Hong Tihao （外联）</font>
+				</div>
+			</div>
+		 </div>
+		 <footer>
+			<p style="padding-left: 25%;"> All reserved by球友加(C)2020 </p>
+		 </footer>
+	</body>
+</html>

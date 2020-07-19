@@ -1,0 +1,186 @@
+<!--
+ 名称：detail.html
+ 介绍：这是 商品详情界面，由 navigationbar、card 元素、image 构成。
+ 时间：2020.07.07
+ 负责人：Alex Greenall
+ 进度：界面搭建完成
+-->
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=0.8,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<title>FootBall Friends Plus</title>
+		
+		<link rel="stylesheet" type="text/css" href="../../CSS/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../CSS/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="../../CSS/font-awesome.min.css" />
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+			
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+			
+			.mui-bar .mui-btn-link {
+				top: 1px;
+			}
+			
+			.mui-content img{
+				width: 100%;
+			}
+		</style>
+		<style type="text/css">
+			.message {
+				background-color: #fff;
+				z-index: 99;
+				box-shadow: 0px -5px 5px 0px rgba(150, 150, 150, .2);
+			}
+			
+			.message.bottom {
+				position: fixed;
+				padding: 15px;
+				bottom: 0;
+				left: 0px;
+				right: 0px;
+			}
+			
+			.message .icon {
+				width: 42px;
+				height: 42px;
+				float: left;
+				text-align: center;
+			}
+			
+			.message .content {
+				padding-left: 55px;
+				font-size: 13px;
+			}
+			
+			.icon .mui-icon {
+				font-weight: 28px;
+				font-weight: 700;
+				line-height: 42px;
+				color: #007AFF;
+			}
+			
+			.action {
+				text-align: right;
+				padding-right: 2px;
+				margin-top: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-transparent">
+			<a class="mui-action-back mui-icon mui-icon-left-nav" href="../mall.html"></a>
+			<h1 class="mui-title"> 商品详情</h1>
+		</header>
+		
+		<div class="mui-content">
+			<!--轮播图片-->
+			<div id="slider" class="mui-slider" >
+			  <div class="mui-slider-group">
+			    <!-- 第一张 -->
+			     <div class="mui-slider-item">
+			      <a href="#">
+			        <img src="../../assert/yuantiao.jpg">
+			      </a>
+			    </div>
+			    <!-- 第二张 -->
+			    <div class="mui-slider-item">
+			      <a href="#">
+			        <img src="../../assert/cbd.jpg">
+			      </a>
+			    </div>
+			  </div>
+			  <div class="mui-slider-indicator">
+			    <div class="mui-indicator mui-active"></div>
+			    <div class="mui-indicator"></div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="mui-card">
+			<div class="mui-card-header"> 商品名称</div>
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍这是介绍
+				</div>
+			</div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-header">店家担保及优惠券</div>
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保这是担保
+				</div>
+			</div>
+			<div class="mui-card-footer">
+				<ul>
+					<li>这是承诺</li>
+					<li>这是承诺</li>
+					<li>这是承诺</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-header"> 顾客评论</div>
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					这是一条评论预览
+				</div>
+			</div>
+			<div class="mui-card-footer"><a>更多评论</a></div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-header"> 店铺介绍</div>
+			<div class="mui-card-header mui-card-media">
+				<img src="../../assert/launch%20screen.jpg" />
+				<div class="mui-media-body">
+					Alex
+					<p>进入 ta 的店铺 ></p>
+				</div>
+			</div>
+		</div>
+		<div class="mui-card">
+			<div class="mui-card-header">产品详情</div>
+			<div class="mui-card-content" >
+				<img src="../../assert/launch%20screen.jpg" alt="" width="100%"/>
+				<img src="../../assert/launch%20screen.jpg" alt="" width="100%"/>
+				<img src="../../assert/launch%20screen.jpg" alt="" width="100%"/>
+				<img src="../../assert/launch%20screen.jpg" alt="" width="100%"/>
+				<img src="../../assert/launch%20screen.jpg" alt="" width="100%"/>
+				<p style="height: 2.25rem;">这是底部</p>
+			</div>
+			<div class="mui-card-footer">页脚</div>
+		</div>
+		
+		<div class="message bottom">
+			<div class="icon">
+				<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+			</div>
+			<p class="content"> 现在下单，预计将于 3-4 天后送达目的地&nbsp;&nbsp;<a href="#"> 关于运费险</a></p>
+			<div class="action">
+				<button type="button" class="mui-btn mui-btn-link"><i class="fa fa-commenting-o" aria-hidden="true"></i>&nbsp;咨询客服</button>
+				<button type="button" class="mui-btn mui-btn-blue mui-btn-link">加入购物车</button>
+				<button type="button" class="mui-btn mui-btn-blue"> 现在购买</button>
+			</div>
+		</div>
+		<script src="../../Javascript/mui.min.js"></script>
+	</body>
+</html>

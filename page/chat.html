@@ -1,0 +1,229 @@
+<!--
+ 名称：chat.html
+ 介绍：这是聊天好友列表界面，由侧边栏、card 元素、tabbar 构成。
+ 时间：2020.07.07
+ 负责人：Alex Greenall
+ 进度：界面搭建完成
+-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.8,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<title>FootBall Friends Plus</title>
+		<script src="../Javascript/sidebar.js"></script>
+		<link rel="stylesheet" type="text/css" href="../CSS/sidebar.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/table.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/mui.min.css">
+		<style>
+				.mui-table h4,.mui-table h5,.mui-table .mui-h5,.mui-table .mui-h6,.mui-table p{
+			        margin-top: 0;
+			    }
+			    .mui-table h4{
+			        line-height: 21px;
+			        font-weight: 500;
+			    }
+			
+			    .mui-table .oa-icon{
+			        position: absolute;
+			        right:0;
+			        bottom: 0;
+			    }
+			    .mui-table .oa-icon-star-filled{
+			        color:#f14e41;
+			    }
+		</style>
+	</head>
+
+	<body>
+		<!--侧边栏-->
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <a href="index.html">球局信息</a>
+		  <a href="chat.html">球友+</a>
+		  <a href="mall.html">球友商城</a>
+		  <a href="about.html">关于</a>
+		</div>
+	
+		<div id="main">
+		  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 球友+</span>
+		</div>
+		<!--navbar 空隙-->
+		<div><p style="height:45px;"></p></div>
+		<div><p style="height: 1.5rem;"></p></div>
+		
+		<div class="mui-content-padded" style="margin: 5px;">
+			<div class="mui-input-row mui-search">
+				<input type="search" class="mui-input-clear" placeholder="搜索">
+			</div>
+		</div>
+		<!--筛选菜单-->
+		<ul id="list" class="mui-table-view mui-table-view-chevron">
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">
+					  筛选
+				</a>
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="mall/shoes.html">
+							临时会话
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="mall/clothes.html">
+							黑名单
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="mall/ball.html">
+							标注
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!--好友列表-->
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-media">
+				<a href="chat/chat-detail.html">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/0.png">
+					<div class="mui-media-body">
+						Alex
+						<p class='mui-ellipsis'> 你好，我是 Alex</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/1.jpg">
+					<div class="mui-media-body">
+						Sum
+						<p class='mui-ellipsis'>hello</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/2.jpg">
+					<div class="mui-media-body">
+						John
+						<p class='mui-ellipsis'>今天天气怎么样</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="chat/chat-detail.html">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/0.png">
+					<div class="mui-media-body">
+						Alex
+						<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/1.jpg">
+					<div class="mui-media-body">
+						Sum
+						<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/2.jpg">
+					<div class="mui-media-body">
+						John
+						<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="chat/chat-detail.html">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/0.png">
+					<div class="mui-media-body">
+						Alex
+						<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/1.jpg">
+					<div class="mui-media-body">
+						Sum
+						<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/2.jpg">
+					<div class="mui-media-body">
+						John
+						<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="chat/chat-detail.html">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/0.png">
+					<div class="mui-media-body">
+						Alex
+						<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/1.jpg">
+					<div class="mui-media-body">
+						Sum
+						<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/2.jpg">
+					<div class="mui-media-body">
+						John
+						<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="chat/chat-detail.html">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/0.png">
+					<div class="mui-media-body">
+						Alex
+						<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/1.jpg">
+					<div class="mui-media-body">
+						Sum
+						<p class='mui-ellipsis'>想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+					</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media">
+				<a href="javascript:;">
+					<img class="mui-media-object mui-pull-left" src="../assert/listpic/2.jpg">
+					<div class="mui-media-body">
+						John
+						<p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!--使筛选动作生效-->
+		<script src="../Javascript/mui.min.js"></script>
+	</body>
+</html>

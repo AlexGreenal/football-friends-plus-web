@@ -1,0 +1,295 @@
+<!--
+ 名称：miniprog.html
+ 介绍：这是 小程序界面，由侧边栏、card 元素、九宫格、tabbar 构成。
+ 时间：2020.07. 12
+ 负责人：Alex Greenall
+ 进度：界面搭建完成
+-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=0.8,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<title>FootBall Friends Plus</title>
+		<script src="../../Javascript/sidebar.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../CSS/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../../CSS/sidebar.css">
+		<link rel="stylesheet" type="text/css" href="../../CSS/tabbar.css">
+		<link rel="stylesheet" type="text/css" href="../../CSS/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../../CSS/font-awesome.min.css">
+		
+		<style>
+			.mui-slider-indicator {
+				bottom: 0;
+			}
+			.mui-slider {
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+
+	<body>
+	<!--侧栏界面设计-->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  	<a href="../index.html">球局信息</a>
+		 	<a href="chat.html">球友+</a>
+		  	<a href="mall.html">球友商城</a>
+		 	<a href="about.html">关于</a>
+		</div>
+		
+		<div id="main">
+		  	<span style="font-size:30px;cursor:pointer" onclick="javascript:void(0)">&#9776; 小程序</span>
+		</div>
+		
+		<div><p style="height: 3.75rem;"></p></div>
+		
+		<main>
+		<div id="Gallery" class="mui-slider" style="margin-top:15px;">
+			<div class="mui-slider-group">
+				<div class="mui-slider-item">
+					<ul class="mui-table-view mui-grid-view mui-grid-9">
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-home"></span>
+								<div class="mui-media-body">Home</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
+								<div class="mui-media-body">Email</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-chatbubble"></span>
+								<div class="mui-media-body">Chat</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-location"></span>
+								<div class="mui-media-body">location</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-search"></span>
+								<div class="mui-media-body">Search</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-phone"></span>
+								<div class="mui-media-body">Phone</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-gear"></span>
+								<div class="mui-media-body">Setting</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-info"></span>
+								<div class="mui-media-body">about</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-more"></span>
+								<div class="mui-media-body">more</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-home"></span>
+								<div class="mui-media-body">Home</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
+								<div class="mui-media-body">Email</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-chatbubble"></span>
+								<div class="mui-media-body">Chat</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-location"></span>
+								<div class="mui-media-body">location</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-search"></span>
+								<div class="mui-media-body">Search</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-phone"></span>
+								<div class="mui-media-body">Phone</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-gear"></span>
+								<div class="mui-media-body">Setting</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-info"></span>
+								<div class="mui-media-body">about</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-more"></span>
+								<div class="mui-media-body">more</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="mui-slider-item">
+					<ul class="mui-table-view mui-grid-view mui-grid-9">
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-home"></span>
+								<div class="mui-media-body">Home</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
+								<div class="mui-media-body">Email</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-chatbubble"></span>
+								<div class="mui-media-body">Chat</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-location"></span>
+								<div class="mui-media-body">location</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-search"></span>
+								<div class="mui-media-body">Search</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-phone"></span>
+								<div class="mui-media-body">Phone</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-gear"></span>
+								<div class="mui-media-body">Setting</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-info"></span>
+								<div class="mui-media-body">about</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+							<a href="#">
+								<span class="mui-icon mui-icon-more"></span>
+								<div class="mui-media-body">more</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		
+		<div>
+			<button type="button" class="mui-btn mui-btn-block"><a href="../miniprog/task.html"> 最近任务 </a></button>
+		</div>
+		
+		<div class="mui-card">
+			<div class="mui-card-header">关于小程序</div>
+			<div class="mui-card-content">
+				<div class="mui-card-content-inner">
+					免责声明：除原生小程序外，其余小程序由第三方开发者以及网友提供。<br>
+					上架投放：如果有贴近软件主题的好软件与好 想法，欢迎<a>提交源码</a>
+				</div>
+			</div>
+			<div class="mui-card-footer"><a href="easter-egg.html">球友加小程序</a></div>
+		</div>
+		
+		<div><p style="height: 3.75rem;"></p></div>
+		
+		</main>
+		<footer>
+		<div id="menu" class="menu">
+			
+			<div id="one" class="subMenu text-center" data-src="index.html">
+				<a href="../index.html" >
+					<i class="fa fa-futbol-o fa-2x" aria-hidden="true"></i>
+					<div class="menu_name">生活信息</div>
+				</a>
+			</div>
+			
+			<div id="two" class="subMenu text-center" data-src="map.html">
+				<a href="map.html">
+					<i class="fa fa-flag fa-2x" aria-hidden="true"></i>
+					<div class="menu_name">球场位置</div>
+				</a>
+			</div>
+			
+			<div id="three" class="subMenu text-center" data-src="">
+				<a href="miniprog.html">
+					<i class="fa fa-tasks fa-2x" aria-hidden="true"></i>
+					<div class="menu_name">小程序</div>
+				</a>
+			</div>
+		</div>
+		</footer>
+	</body>
+	<script src="../../Javascript/mui.min.js"></script>
+	<script>
+		mui.init();
+		mui.ready(function() {
+			var slider = document.getElementById('Gallery');
+			var group = slider.querySelector('.mui-slider-group');
+			var items = mui('.mui-slider-item', group);
+			//克隆第一个节点
+			var first = items[0].cloneNode(true);
+			first.classList.add('mui-slider-item-duplicate');
+			//克隆最后一个节点
+			var last = items[items.length - 1].cloneNode(true);
+			last.classList.add('mui-slider-item-duplicate');
+			//处理是否循环逻辑，若支持循环，需支持两点：
+			//1、在.mui-slider-group节点上增加.mui-slider-loop类
+			//2、重复增加2个循环节点，图片顺序变为：N、1、2...N、1
+			var sliderApi = mui(slider).slider();
+			});
+		});
+	</script>
+</html>

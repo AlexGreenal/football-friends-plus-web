@@ -1,0 +1,68 @@
+<!--
+ 名称：map.html
+ 介绍：这是约球定位页面，由侧边栏、 iframe 元素、tabbar 构成。
+ 时间：2020.07.13
+ 负责人：Alex Greenall
+ 进度：界面搭建完成
+-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=0.8,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+		<title>FootBall Friends Plus</title>
+		<script src="../../Javascript/sidebar.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../CSS/sidebar.css">
+		<link rel="stylesheet" type="text/css" href="../../CSS/tabbar.css">
+		<link rel="stylesheet" type="text/css" href="../../CSS/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../../CSS/font-awesome.min.css">
+	</head>
+
+	<body>
+	<!--侧边栏-->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  	<a href="index.html">球局信息</a>
+		 	<a href="chat.html">球友+</a>
+		  	<a href="mall.html">球友商城</a>
+		 	<a href="about.html">关于</a>
+		</div>
+
+		<div id="main">
+		  	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; 球场定位</span>
+		</div>
+		<div><p style="height: 3.2rem;"></p></div>
+		
+		<iframe src="baidumap.html" style="width: 99%;height: 52.5rem;"></iframe>
+		
+		<footer>
+		<div id="menu" class="menu">
+			
+			<div id="one" class="subMenu text-center" data-src="index.html">
+				<a href="../index.html" >
+					<i class="fa fa-futbol-o fa-2x" aria-hidden="true"></i>
+					<div class="menu_name">生活信息</div>
+				</a>
+			</div>
+			
+			<div id="two" class="subMenu text-center" data-src="map.html">
+				<a href="map.html">
+					<i class="fa fa-flag fa-2x" aria-hidden="true"></i>
+					<div class="menu_name">球场位置</div>
+				</a>
+			</div>
+			
+			<div id="three" class="subMenu text-center" data-src="miniprog.html">
+				<a href="miniprog.html">
+					<i class="fa fa-tasks fa-2x" aria-hidden="true"></i>
+					<div class="menu_name">小程序</div>
+				</a>
+			</div>
+			
+		</div>
+		</footer>
+	</body>
+</html>
