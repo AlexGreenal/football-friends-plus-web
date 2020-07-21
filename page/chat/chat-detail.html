@@ -1,0 +1,235 @@
+<!--
+ 名称：chat-detail.html
+ 介绍：这是 聊天界面。
+ 时间：2020.07.21
+ 负责人：Alex Greenall
+ 进度：界面搭建完成
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=0.8,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css"	href="../../CSS/mui.min.css">
+	
+	<script src="../../Javascript/jquery.min.js"></script>
+	<script src="../../Javascript/mui.min.js"></script>
+	<script>
+        function BodyOnLoad() {
+            var textarea= document.getElementById("msg-content");
+            textarea.style.posHeight=textarea.scrollHeight;
+        }
+    </script>
+	<style>
+		body{
+			background-color: #D7D5D5;
+		}
+		#service-list .mobile-page pre{
+			white-space: pre-wrap;
+			word-wrap: break-word;
+		}
+		.mobile-page{
+			margin-bottom: 2.5rem;
+		}
+		.mobile-page .admin-img, .mobile-page .user-img{
+		 width: 45px;
+		 height: 45px;
+		}
+		i.triangle-admin,i.triangle-user{
+		 width: 0;
+			 height: 0;
+			 position: absolute;
+			 top: 10px;
+		 display: inline-block;
+			 border-top: 10px solid transparent;
+			 border-bottom: 10px solid transparent;
+		}
+		.mobile-page i.triangle-admin{
+		 left: 4px;
+		 border-right: 12px solid rgb(248, 248, 248);
+		}
+		.mobile-page i.triangle-user{
+		 right: 4px;
+			 border-left: 12px solid #9EEA6A;
+		}
+		.mobile-page .admin-group, .mobile-page .user-group{
+		 padding: 6px;
+		 display: flex;
+		 display: -webkit-flex;
+		}
+		.mobile-page .admin-group{
+		 justify-content: flex-start;
+		 -webkit-justify-content: flex-start;
+		}
+		.mobile-page .user-group{
+		 justify-content: flex-end;
+		 -webkit-justify-content: flex-end;
+		}
+		.mobile-page .admin-reply, .mobile-page .user-reply{
+		 display: inline-block;
+		 padding: 13px;
+		 border-radius: 4px;
+		 background-color: #fff;
+		 margin:0 15px 12px;
+		 font-size: .8rem;
+		 white-space: pre-wrap;
+		}
+		.mobile-page .admin-reply{
+		 box-shadow: 0px 0px 2px #ddd;
+		}
+		.mobile-page .user-reply{
+		 text-align: left;
+		 background-color: #9EEA6A;
+		 box-shadow: 0px 0px 2px #bbb;
+		}
+		.mobile-page .user-msg, .mobile-page .admin-msg{
+		 width: 75%;
+		 position: relative;
+		}
+		.mobile-page .user-msg{
+		 text-align: right;
+		}
+		/*--- 消息输入框--- */
+		.msg-input-bgk{
+			background-color:#e7e7e7;
+			padding: .5rem;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		.msg-input-outer{
+			display: flex;
+			justify-content: space-between;
+			align-items:center;
+		}
+		.msg-input-outer>textarea{
+			border-radius:5px; 
+			flex-grow: 2;
+			margin-right:1rem;
+			border: 0px;
+		}
+		.msg-input-outer>a.button{
+			margin: 0;
+		}
+        .button1,.button2 {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+	</style>
+	
+	</head>
+	
+    <body onload = "BodyOnLoad();">
+		<header id="header" class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-left-nav" href="../chat.html"></a>
+			<button class="mui-btn mui-btn-blue mui-btn-link mui-pull-right"><a href="person.html">关于</a></button>
+			<h1 class="mui-title"> Alex</h1>
+		</header>
+        <div class="mobile-page">
+			<div class="admin-group">
+			    <div class="admin-msg">
+			        <pre><font size="5" class="admin"> 消息开始 </font></pre>
+			    </div>
+			 </div>
+        <div class="user-group">
+            <div class="user-msg">
+                <pre class="user-reply"><font size="5">Hello，兄弟，今天有空没，约个球啊？</font></pre>
+                <i class="triangle-user"></i>
+            </div>
+            <img class="user-img" src="../../assert/listpic/0.png" alt="touxiang"/>
+        </div>
+			 
+        <div class="admin-group">
+            <img class="admin-img" src="../../assert/listpic/Pasted%20Graphic.jpg"/>
+            <div class="admin-msg">
+                <i class="triangle-admin"></i>
+                <pre class="admin-reply"><font size="5" class="admin">有空有空，我正好不加班，好长时间没踢了</font></pre>
+            </div>
+        </div>
+		
+        <div class="user-group">
+            <div class="user-msg">
+                <pre class="user-reply"><font size="5">行，今天我大约5点钟下班，之后就直接到XX足球场等你。你先预约一下，然后看看它的位置和排队人数，如果行的话就在那。估计那里应该不错。</font></pre>
+                <i class="triangle-user"></i>
+            </div>
+            <img class="user-img" src="../../assert/listpic/0.png"/>
+        </div>
+		
+         <div class="admin-group">
+            <img class="admin-img" src="../../assert/listpic/Pasted%20Graphic.jpg"/>
+            <div class="admin-msg">
+                <i class="triangle-admin"></i>
+                <pre class="admin-reply"><font size="5" class="admin">好👌</font></pre>
+            </div>
+        </div>
+    </div>
+	
+    <p id="msg_end" name="1" href="#1"><font size="1" id="time"></font></p></div>
+    <!--script>setInterval("document.getElementById('time').innerHTML=new Date().toLocaleString();", 1000)</script-->
+					
+					
+    <!-- 输入消息 -->
+    <div class="msg-input-bgk">
+        <div class="msg-input-outer">
+            <textarea name="" rows="1" id="msg-content" style="margin-bottom: 0.0625rem;" class="area"></textarea>
+            <!--button id="send-msg" class="button1">发送</button-->
+			<button type="button" class="mui-btn mui-btn-primary button1" id="send-msg" >确认</button>
+            <!--button id="send-msg-second" class="button2">清除</button-->&nbsp;
+			<button type="button" class="mui-btn mui-btn-primary button2" id="send-msg-second" > 清除</button>
+            </div>
+        </div>
+	</body>
+	
+	<script type="text/javascript">
+		//滚动条保持在底部
+		function sclloBottom(){
+			msg_end.scrollIntoView();
+		}
+		//调整输入框高度
+		//先要获取一次键盘的高度，不然会出现挤压的情况
+		/*var firstHeight=$("#msg-content")[0].scrollHeight;
+		$("#msg-content").height(firstHeight);
+		$("#msg-content").on("keyup keydown", function(){
+			if(this.scrollHeight<=79){
+				$(this).height(this.scrollHeight);
+			}else{
+				$(this).height("79");
+			}
+		});*/
+		//测试:点击发送插入消息
+		$("#send-msg").on("click",function(){
+				var text=$("#msg-content").val();
+				if(text=="" || text.match(/^\s+$/g)){
+					alert("消息不能为空");
+				}else{
+					var html='<div class="user-group"><div class="user-msg"><pre class="user-reply"><font size="5">'+text+'</font></pre><i class="triangle-user"></i></div><img class="user-img" src="../../assert/listpic/0.png"/></div>';
+					$('.mobile-page').append(html);
+					$("#msg-content").val("").focus();//清空输入框并获取焦点
+					sclloBottom();//保持滚动条在底部
+					$("#msg-content").height(firstHeight);//恢复初始高度
+				}
+		});
+			$("#send-msg-second").on("click",function(){
+				var text=$("#msg-content").val();
+				if(text=="" || text.match(/^\s+$/g)){
+					alert("消息不能为空");
+				}else{
+					var html='<div class="admin-group"><img class="admin-img" src="../../assert/listpic/Pasted%20Graphic.jpg"/><div class="admin-msg"><pre class="admin-reply"><font size="5" class="admin">'+text+'</font></pre><i class="triangle-admin"></i></div></div>';
+					$('.mobile-page').append(html);
+					$("#msg-content").val("").focus();//清空输入框并获取焦点
+					sclloBottom();//保持滚动条在底部
+					$("#msg-content").height(firstHeight);//恢复初始高度
+				}
+		});
+	</script>
+</html>
